@@ -1,0 +1,70 @@
+SLEEP HEALTH AND LIFESTYLE DATASET - ANALYSIS SUMMARY
+Generated from sleep_health.csv
+
+========================================================================
+Slide: Data Description
+========================================================================
+The dataset contains 374 rows and 13 columns.
+Columns: Person ID, Gender, Age, Occupation, Sleep Duration, Quality of Sleep, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps, Sleep Disorder
+Missing values: 219 in total, found in 'Sleep Disorder' (219) (the blank Sleep Disorder entries are read as 'no disorder recorded').
+
+Variable types (one example of each):
+
+1. Continuous variable: 'Sleep Duration'
+   Example values: 6.1, 6.2, 5.9, 6.3, 7.8, 6.0
+   Justification: It is a float measured in hours that can take any fractional value in a range (e.g. 7.2), so it is measured rather than counted.
+
+2. Integer variable: 'Daily Steps'
+   Example values: 4200, 10000, 3000, 3500, 8000, 4000
+   Justification: It is a whole-number count of steps taken per day, so only discrete integer values are possible.
+
+3. Ordinal categorical variable: 'Quality of Sleep'
+   Example values: 6, 4, 7, 5, 8, 9
+   Justification: It is a 1-10 subjective rating whose categories have a meaningful natural order from worst to best sleep quality.
+
+4. Nominal categorical variable: 'Gender'
+   Example values: Male, Female
+   Justification: It labels group membership (Male / Female) with no inherent order or ranking between the categories.
+
+========================================================================
+Slide: Typical Physical Activity (Minutes)
+========================================================================
+Variable: Physical Activity Level (minutes/day), n = 374
+Mean   : 59.17
+Median : 60.00
+Mode   : 60.00 (occurs 70 times)
+
+Interpretation: the distribution is approximately symmetric, because the mean and median are almost identical.
+
+========================================================================
+Slide: Analysis of Daily Steps Taken
+========================================================================
+Variable: Daily Steps, n = 374
+Standard deviation : 1617.92
+Minimum            : 3000.00
+Maximum            : 10000.00
+Range              : 7000.00
+Q1                 : 5600.00
+Q3                 : 8000.00
+IQR (Q3 - Q1)      : 2400.00
+Variance           : 2617651.14
+
+========================================================================
+Slide: Distribution of Heart Rates
+========================================================================
+Variable: Heart Rate (bpm), n = 374
+Mean   : 70.17
+Median : 70.00
+Q1     : 68.00
+Q3     : 72.00
+IQR    : 4.00
+IQR lower fence : 62.00
+IQR upper fence : 78.00
+Skewness        : 1.22
+Excess kurtosis : 2.24
+
+Outliers exist: 15 value(s) fall outside the IQR fences [62.00, 78.00] -> 80, 81, 82, 83, 84, 85, 86 bpm.
+
+Shape: the distribution is right-skewed (positively skewed, skewness = 1.22): a long tail of high heart rates stretches toward the right, and the shape is not perfectly unimodal - a secondary cluster of elevated rates sits in the mid-70s bpm next to the main peak in the high 60s.
+Figure: heart_rate_distribution.png (histogram with 15 bins, KDE overlay, dashed mean and median lines).
+
